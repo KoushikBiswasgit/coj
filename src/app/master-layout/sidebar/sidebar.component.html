@@ -1,0 +1,34 @@
+<!-- <div class="list-group">
+    <a *ngFor="let item of menuItems" class="list-group-item list-group-item-action" [routerLink]="item.link">
+        {{ item.label }}
+    </a>
+</div> -->
+
+
+
+<div id="custom-sidebar">
+    <div class="wrapper element-shadow">
+      <div class="group" *ngFor="let item of menuItems; let parentIndex = index">
+        <a (click)="ddToggle(parentIndex)" [routerLink]="item.link" class="light-blue-bg">{{ item.label }}</a>
+        <div *ngIf="item.submenu && item.submenu.length > 0" class="caret" [ngClass]="{ 'rotate-caret': item.menu }">&#9660;</div>
+        <div class="sub-menu" [ngClass]="{ 'show-menu': item.menu }">
+          <ul *ngFor="let menu of item.submenu; let childIndex = index">
+            <li>
+              <a (click)="ddToggleChild(parentIndex, childIndex)" [routerLink]="item.childLink">{{ menu.childLabel }}</a>
+              <div *ngIf="menu.childSubmenu && menu.childSubmenu.length > 0" class="caret" [ngClass]="{ 'rotate-caret': menu.menu }">&#9660;</div>
+              <div class="sub-menu" [ngClass]="{ 'show-menu': menu.menu }">
+                <ul *ngFor="let childSubmenu of menu.childSubmenu; let grandChildIndex = index">
+                  <li><a [routerLink]="item.childSubLink">{{ childSubmenu.childSubLabel }}</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  
+  
+  
