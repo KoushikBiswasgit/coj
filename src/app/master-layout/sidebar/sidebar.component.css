@@ -2,7 +2,7 @@
     font: normal 13px sans-serif;
     box-sizing: border-box;
     position: relative;
-    margin: 40px auto 0 auto;
+    margin: 0 auto 0 auto;
 }
 #custom-sidebar .expand-all {
     font-size: 12px;
@@ -24,7 +24,7 @@
     border-bottom-right-radius: 6px;
 }
 #custom-sidebar .wrapper .group {
-    border-bottom: 1px solid #313b3f;
+    border-bottom: 1px solid #979797;
     overflow: hidden;
     position: relative;
 }
@@ -36,7 +36,7 @@
     padding: 7px 0 6px 20px;
     display: block;
     cursor: pointer;
-    background-color: #03658c;
+    background-color: #393b92;
 }
 #custom-sidebar .wrapper .group .caret {
     position: absolute;
