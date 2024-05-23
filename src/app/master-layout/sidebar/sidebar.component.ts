@@ -11,18 +11,21 @@ export class SidebarComponent {
   menuItems: any[] = [
     { 
       label: 'Home', 
+      icon: '<i class="fa fa-home"></i>',
       link: '/',
       submenu: [],
       menu: false 
     },
     { 
       label: 'Products', 
+      icon: '<i class="fa fa-home"></i>',
       link: '/products',
       submenu: [],
       menu: false
     },
     {
       label: 'Custom Menu',
+      icon: '<i class="fa fa-menu"></i>',
       link: '/custom-menu',
       submenu: [
         {

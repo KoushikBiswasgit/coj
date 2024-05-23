@@ -9,7 +9,9 @@
 <div id="custom-sidebar">
     <div class="wrapper element-shadow">
       <div class="group" *ngFor="let item of menuItems; let parentIndex = index">
-        <a (click)="ddToggle(parentIndex)" [routerLink]="item.link" class="light-blue-bg">{{ item.label }}</a>
+        <a (click)="ddToggle(parentIndex)" [routerLink]="item.link" class="light-blue-bg">
+          <span [innerHTML]="item.icon"></span> {{ item.label }}
+        </a>
         <div *ngIf="item.submenu && item.submenu.length > 0" class="caret" [ngClass]="{ 'rotate-caret': item.menu }">&#9660;</div>
         <div class="sub-menu" [ngClass]="{ 'show-menu': item.menu }">
           <ul *ngFor="let menu of item.submenu; let childIndex = index">
