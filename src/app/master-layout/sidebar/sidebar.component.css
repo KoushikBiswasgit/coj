@@ -1,9 +1,46 @@
 #custom-sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 50px;
+    min-height: 100%;
+    width: 230px;
+    z-index: 810;
+    -webkit-transition: -webkit-transform .3s ease-in-out, width .3s ease-in-out;
+    -moz-transition: -moz-transform .3s ease-in-out, width .3s ease-in-out;
+    -o-transition: -o-transform .3s ease-in-out, width .3s ease-in-out;
+    transition: transform .3s ease-in-out, width .3s ease-in-out;
+    background: #313b3f;
+}
+
+header .sidebar-toggle {
+    float: left;
+    background-color: transparent;
+    background-image: none;
+    padding: 15px 15px;
+    font-family: fontAwesome
+}
+
+header .sidebar-toggle:before {
+    content: "\f0c9"
+}
+
+header .sidebar-toggle:hover {
+    color: #fff
+}
+
+header .sidebar-toggle:focus, header .sidebar-toggle:active {
+    background: transparent
+}
+
+
+/* #custom-sidebar {
     font: normal 13px sans-serif;
     box-sizing: border-box;
     position: relative;
     margin: 0 auto 0 auto;
 }
+*/
 #custom-sidebar .expand-all {
     font-size: 12px;
     text-align: right;

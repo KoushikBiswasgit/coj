@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -7,11 +7,16 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
   
-  isCollapsed = true; // Variable to track navbar collapse state
-
-  toggleNavbar() {
-    this.isCollapsed = !this.isCollapsed; // Toggle collapse state
+  constructor(private renderer: Renderer2) { }
+  
+  toggleBodyClass() {
+    const body = document.body;
+    if (body.classList.contains('sidebar-collapse')) {
+      this.renderer.removeClass(body, 'sidebar-collapse');
+    } else {
+      this.renderer.addClass(body, 'sidebar-collapse');
+    }
   }
-
+  
 
 }

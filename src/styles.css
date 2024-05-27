@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+.sidebar-collapse app-layout #custom-sidebar {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+    width: 50px !important;
+    z-index: 850;
+}
+
+.sidebar-collapse app-layout app-navbar header .navbar {
+    margin-left: 50px !important;
+}
+.sidebar-collapse header .logo{width: 50px !important;}
+.sidebar-collapse header .logo .logo-lg{display: none;}
+.sidebar-collapse header .logo .logo-mini{display: block; width: 20px;}
+
+.sidebar-collapse #custom-sidebar .wrapper .group > a span.label {display: none;}
+.sidebar-collapse #custom-sidebar .wrapper .group > .sub-menu ul li a span.label {display: none;}
+.sidebar-collapse #custom-sidebar .wrapper .group > .sub-menu .sub-menu ul li a span.label {display: none;}
+
+
+
+.content-wrapper{
+    margin-left: 230px;
+}
+.sidebar-collapse .content-wrapper{
+    margin-left: 50px !important;
+}
+.content-header {
+    padding: 15px .5rem;
+}

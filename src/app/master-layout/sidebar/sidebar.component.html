@@ -10,17 +10,25 @@
     <div class="wrapper element-shadow">
       <div class="group" *ngFor="let item of menuItems; let parentIndex = index">
         <a (click)="ddToggle(parentIndex)" [routerLink]="item.link" class="light-blue-bg">
-          <span [innerHTML]="item.icon"></span> {{ item.label }}
+          <span [innerHTML]="item.icon"></span> 
+          <span class="label">{{ item.label }}</span>
         </a>
         <div *ngIf="item.submenu && item.submenu.length > 0" class="caret" [ngClass]="{ 'rotate-caret': item.menu }">&#9660;</div>
         <div class="sub-menu" [ngClass]="{ 'show-menu': item.menu }">
           <ul *ngFor="let menu of item.submenu; let childIndex = index">
             <li>
-              <a (click)="ddToggleChild(parentIndex, childIndex)" [routerLink]="item.childLink">{{ menu.childLabel }}</a>
+              <a (click)="ddToggleChild(parentIndex, childIndex)" [routerLink]="item.childLink">
+                <span [innerHTML]="item.icon"></span> 
+                <span class="label"> {{ menu.childLabel }}</span>
+              </a>
               <div *ngIf="menu.childSubmenu && menu.childSubmenu.length > 0" class="caret" [ngClass]="{ 'rotate-caret': menu.menu }">&#9660;</div>
               <div class="sub-menu" [ngClass]="{ 'show-menu': menu.menu }">
                 <ul *ngFor="let childSubmenu of menu.childSubmenu; let grandChildIndex = index">
-                  <li><a [routerLink]="item.childSubLink">{{ childSubmenu.childSubLabel }}</a></li>
+                  <li><a [routerLink]="item.childSubLink">
+                    <span [innerHTML]="item.icon"></span> 
+                    <span class="label"> {{ childSubmenu.childSubLabel }}</span> 
+                  </a>
+                </li>
                 </ul>
               </div>
             </li>

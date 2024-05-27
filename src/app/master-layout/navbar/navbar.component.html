@@ -42,14 +42,22 @@
             </div>
         </div>
     </nav> -->
+    <a href="../index2.html" class="logo">
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <button (click)="toggleNavbar()" class="navbar-toggler" type="button" [attr.aria-expanded]="!isCollapsed" aria-controls="navbarNav"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div [ngClass]="{'collapse': isCollapsed, 'navbar-collapse': true}" id="navbarNav">
+        <span class="logo-mini"><b>D</b>D</span>
+
+        <span class="logo-lg"><b>Demo</b> Dash</span>
+    </a>
+    <nav class="navbar navbar-expand-lg">
+        
+        <div class="navbar-static-top">
+            <a href="#" class="sidebar-toggle" (click)="toggleBodyClass()" data-toggle="push-menu" role="button">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <div class="navbar-custom-menu">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
@@ -64,6 +72,6 @@
             </div>
         </div>
     </nav>
-    
-      
+
+
 </header>
